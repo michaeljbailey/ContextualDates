@@ -181,6 +181,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="Services\AnchorParsingService.cs" />
+    <Compile Include="Services\ContextualDatesService.cs" />
+    <Compile Include="Services\DateContextParsingService.cs" />
+    <Compile Include="Services\IDateContextParsingService.cs" />
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
