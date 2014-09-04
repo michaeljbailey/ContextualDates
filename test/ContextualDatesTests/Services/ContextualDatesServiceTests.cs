@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using ContextualDates;
-using ContextualDates.Services;
+using ContextualDates.Library;
+using ContextualDates.Library.Services;
 using NUnit.Framework;
 
-namespace ContextualDatesTests.Services
+namespace ContextualDates.LibraryTests.Services
 {
     public class ContextualDatesServiceTests
     {

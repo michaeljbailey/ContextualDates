@@ -1,4 +1,4 @@
-﻿namespace ContextualDates
+﻿namespace ContextualDates.Library
 {
     public class DateContext
     {

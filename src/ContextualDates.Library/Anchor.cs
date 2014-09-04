@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ContextualDates
+namespace ContextualDates.Library
 {
     public class Anchor
     {

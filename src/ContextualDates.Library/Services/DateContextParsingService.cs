@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace ContextualDates.Services
+namespace ContextualDates.Library.Services
 {
     public class DateContextParsingService : IDateContextParsingService
     {

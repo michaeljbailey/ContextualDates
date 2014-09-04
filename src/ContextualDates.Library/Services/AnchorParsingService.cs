@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace ContextualDates.Services
+namespace ContextualDates.Library.Services
 {
     public class AnchorParsingService
     {

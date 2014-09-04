@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ContextualDates.Services
+namespace ContextualDates.Library.Services
 {
     public class ContextualDatesService
     {
