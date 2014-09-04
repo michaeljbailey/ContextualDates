@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContextualDates.Library", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContextualDates.LibraryTests", "test\ContextualDates.LibraryTests\ContextualDates.LibraryTests.csproj", "{B666D610-BD1D-4138-8FED-CED364DCC824}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContextualDates", "src\ContextualDates\ContextualDates.csproj", "{EFF08362-2685-4779-A458-B54ECA58860F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,12 +27,17 @@ Global
 		{B666D610-BD1D-4138-8FED-CED364DCC824}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B666D610-BD1D-4138-8FED-CED364DCC824}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B666D610-BD1D-4138-8FED-CED364DCC824}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EFF08362-2685-4779-A458-B54ECA58860F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFF08362-2685-4779-A458-B54ECA58860F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFF08362-2685-4779-A458-B54ECA58860F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFF08362-2685-4779-A458-B54ECA58860F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{48F0E3D6-8418-4731-B79F-C4B22A0A8C0C} = {06DAB4AF-DBB6-4054-A3DE-DA1825F2CC9F}
+		{EFF08362-2685-4779-A458-B54ECA58860F} = {06DAB4AF-DBB6-4054-A3DE-DA1825F2CC9F}
 		{B666D610-BD1D-4138-8FED-CED364DCC824} = {CEF87038-FC54-4B3B-8FE7-2787995BEB11}
 	EndGlobalSection
 EndGlobal
