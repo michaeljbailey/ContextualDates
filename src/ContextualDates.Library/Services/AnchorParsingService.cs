@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 
-namespace ContextualDates.Services
+namespace ContextualDates.Library.Services
 {
     public class AnchorParsingService
     {
@@ -32,7 +32,7 @@ namespace ContextualDates.Services
                     AnchorDate = Convert.ToDateTime(match.Value),
                     DocumentText = documentText
                 };
-                anchor.Contexts = _dateContextParsingService.ParseOutDateContexts(anchor);
+                //anchor.Contexts = _dateContextParsingService.ParseOutDateContexts(anchor);
                 anchors.Add(anchor);
             }
             return anchors;

@@ -1,9 +1,9 @@
 ﻿using System;
-using ContextualDates;
-using ContextualDates.Services;
+using ContextualDates.Library;
+using ContextualDates.Library.Services;
 using NUnit.Framework;
 
-namespace ContextualDatesTests.Services
+namespace ContextualDates.LibraryTests.Services
 {
     public class DateContextParsingServiceTests
     {
@@ -15,15 +15,10 @@ namespace ContextualDatesTests.Services
             {
                 // Arrange
                 var dateContextParsingService = new DateContextParsingService();
-
+                var documentText = "On 04/21/1980, Mike heard a sudden shriek of terror.";
                 // Act
-                var anchor = new Anchor
-                {
-                    AnchorDate = new DateTime(1980, 4, 21),
-                    Contexts = null,
-                    DocumentText = "On 04/21/1980, Mike heard a sudden shriek of terror."
-                };
-                var dateContexts = dateContextParsingService.ParseOutDateContexts(anchor);
+                
+                var dateContexts = dateContextParsingService.ParseOutDateContexts(documentText);
 
                 // Assert
                 Assert.That(dateContexts.Count, Is.EqualTo(1));
