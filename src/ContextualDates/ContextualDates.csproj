@@ -103,6 +103,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ContextualDates.docx" />
+    <Compile Include="DateCommentService.cs" />
+    <Compile Include="IDateCommentService.cs" />
     <Compile Include="ThisDocument.cs">
       <DependentUpon>ContextualDates.docx</DependentUpon>
     </Compile>
@@ -132,6 +134,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ContextualDates.Library\ContextualDates.Library.csproj">
+      <Project>{48F0E3D6-8418-4731-B79F-C4B22A0A8C0C}</Project>
+      <Name>ContextualDates.Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,46 +1,30 @@
-﻿using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Windows.Forms;
+﻿using System.Collections.Generic;
+using ContextualDates.Library;
+using ContextualDates.Library.Services;
 using Microsoft.Office.Tools.Word;
-using Label = System.Windows.Forms.Label;
 using Office = Microsoft.Office.Core;
-using Word = Microsoft.Office.Interop.Word;
 
 namespace ContextualDates
 {
     public partial class ThisDocument
     {
+        private IDateContextParsingService _dateContextParsingService;
+        private IDateCommentService _dateCommentService;
+
+        
         private void ThisDocument_Startup(object sender, System.EventArgs e)
         {
-            Content.Text = "This is 01/01/2014. Now it is 02/14/1987. Now it is 09/09/2014.";
+            _dateContextParsingService = new DateContextParsingService();
+            _dateCommentService = new DateCommentService(this);
+            Content.Text = "This is 01/01/2014. Why do I need to add +1 to the index for each sentence?! Now it is 02/14/1987. This is an interim sentence. Now it is 09/09/2014.";
 
             BeforeSave += OnBeforeSave;
         }
 
         private void OnBeforeSave(object sender, SaveEventArgs saveEventArgs)
         {
-            var text = Content.Text;
-            var myRegex = new Regex(@"\d{2}/\d{2}/\d{4}");
-            var totalLength = 0;
-            for (var i = 1; i <= Sentences.Count; i++)
-            {
-                var matchCollection = myRegex.Matches(Sentences[i].Text);
-                if (matchCollection.Count > 0)
-                {
-                    foreach (Match match in matchCollection)
-                    {
-                        object matchStartIndex = totalLength+match.Index;
-                        object matchEndIndex = ((int) matchStartIndex) + 10;
-                        Comments.Add(Range(ref matchStartIndex, ref matchEndIndex),
-                            string.Format("{0:d} is here", match.Value));
-                    }
-                    
-                }
-                totalLength += Sentences[i].Text.Count()+1; // Not sure why the +1 needs to be here, but there it is...
-            }
+            var dateContexts = _dateContextParsingService.ParseOutDateContexts(Content.Text);
+            _dateCommentService.CommentDates(dateContexts);
         }
 
 

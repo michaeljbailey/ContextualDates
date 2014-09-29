@@ -32,7 +32,7 @@ namespace ContextualDates.Library.Services
                     AnchorDate = Convert.ToDateTime(match.Value),
                     DocumentText = documentText
                 };
-                anchor.Contexts = _dateContextParsingService.ParseOutDateContexts(anchor);
+                //anchor.Contexts = _dateContextParsingService.ParseOutDateContexts(anchor);
                 anchors.Add(anchor);
             }
             return anchors;

@@ -4,6 +4,6 @@ namespace ContextualDates.Library.Services
 {
     public interface IDateContextParsingService
     {
-        List<DateContext> ParseOutDateContexts(Anchor anchor);
+        List<DateContext> ParseOutDateContexts(string documentText);
     }
 }

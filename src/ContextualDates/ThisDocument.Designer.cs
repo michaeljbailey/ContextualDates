@@ -29,10 +29,12 @@ namespace ContextualDates {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Never)]
         public ThisDocument(Microsoft.Office.Tools.Word.Factory factory, global::System.IServiceProvider serviceProvider) : 
-                base(factory, serviceProvider, "ThisDocument", "ThisDocument") {
+                base(factory, serviceProvider, "ThisDocument", "ThisDocument")
+        {
             Globals.Factory = factory;
+            _dateCommentService = new DateCommentService(this);
         }
-        
+
         /// 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Tools.Office.ProgrammingModel.dll", "12.0.0.0")]
